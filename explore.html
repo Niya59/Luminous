@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Options</title>
+  <link rel="stylesheet" href="explorestyle.css">
+  <script src="explorescript.js"></script>  
+  
+</head>
+<body>
+  <div class="container" id="mainContainer">
+    <div class="title">
+      <h1>Welcome</h1>
+      <p>Please choose an account type:</p>
+    </div>
+    <div class="account-options">
+      <button class="account-button creator" onclick="showCreatorForm()">Creator Account</button>
+      <button class="account-button investor" onclick="showInvestorForm()">Investor Account</button>
+    </div>
+
+    <!-- Creator Account Form -->
+    <div id="creatorForm" class="account-form" style="display:none;">
+      <h2>Create Creator Account</h2>
+      <form id="creatorAccountForm">
+        <label for="creatorName">Enter Name:</label>
+        <input type="text" id="creatorName" name="creatorName" required><br>
+
+        <label for="creatorEmail">Enter Email ID:</label>
+        <input type="email" id="creatorEmail" name="creatorEmail" required><br>
+
+        <label for="creatorUsername">Create Username:</label>
+        <input type="text" id="creatorUsername" name="creatorUsername" required><br>
+
+        <label for="creatorPassword">Create Password:</label>
+        <input type="password" id="creatorPassword" name="creatorPassword" required><br>
+
+        <label for="creatorConfirmPassword">Confirm Password:</label>
+        <input type="password" id="creatorConfirmPassword" name="creatorConfirmPassword" required><br>
+
+        <button type="submit" onclick="submitCreatorForm(event)">Create Account</button>
+      </form>
+    </div>
+
+    <!-- Investor Account Form -->
+    <div id="investorForm" class="account-form" style="display:none;">
+      <h2>Create Investor Account</h2>
+      <form id="investorAccountForm">
+        <label for="investorName">Enter Name:</label>
+        <input type="text" id="investorName" name="investorName" required><br>
+
+        <label for="investorEmail">Enter Email ID:</label>
+        <input type="email" id="investorEmail" name="investorEmail" required><br>
+
+        <label for="investorUsername">Create Username:</label>
+        <input type="text" id="investorUsername" name="investorUsername" required><br>
+
+        <label for="investorPassword">Create Password:</label>
+        <input type="password" id="investorPassword" name="investorPassword" required><br>
+
+        <label for="investorConfirmPassword">Confirm Password:</label>
+        <input type="password" id="investorConfirmPassword" name="investorConfirmPassword" required><br>
+
+        <button type="submit" onclick="submitInvestorForm(event)">Create Account</button>
+      </form>
+    </div>
+
+    <!-- Creator Ideas Section -->
+    <div class="creator-ideas" id="creatorIdeas">
+      <h2>Creator Ideas</h2>
+      <div class="idea-scroll-container" id="creatorProfiles">
+        <div class="idea-profile" onclick="openMessageModal('Creator 1')">
+          <img src="https://via.placeholder.com/100" alt="Creator 1" class="profile-img">
+          <div class="profile-info">
+            <h3>Creator 1</h3>
+            <p>Passionate about creating innovative content.</p>
+            <button class="message-button">Message</button>
+          </div>
+        </div>
+        <div class="idea-profile" onclick="openMessageModal('Creator 2')">
+          <img src="https://via.placeholder.com/100" alt="Creator 2" class="profile-img">
+          <div class="profile-info">
+            <h3>Creator 2</h3>
+            <p>Focuses on developing creative solutions in technology.</p>
+            <button class="message-button">Message</button>
+          </div>
+        </div>
+        <div class="idea-profile" onclick="openMessageModal('Creator 3')">
+          <img src="https://via.placeholder.com/100" alt="Creator 3" class="profile-img">
+          <div class="profile-info">
+            <h3>Creator 3</h3>
+            <p>Innovator in the world of digital arts and graphics.</p>
+            <button class="message-button">Message</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- +more button to load additional creators -->
+      <button id="loadMore" onclick="loadMoreCreators()">+More</button>
+    </div>
+
+    <!-- Message Modal -->
+    <div id="messageModal" class="message-modal" onclick="closeMessageModal(event)">
+      <div class="message-modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeMessageModal()">&times;</span>
+        <h3>Send a message to <span id="creatorNameText"></span></h3>
+        <textarea id="messageText" placeholder="Type your message here..."></textarea>
+        <button onclick="sendMessage('sdfsd@asd.com')">Send Message</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 

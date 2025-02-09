@@ -1,0 +1,253 @@
+/* Resetting global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  
+  /* Container */
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    margin-top: 30px;
+  }
+  
+  /* Title */
+  .title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .title p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Account buttons */
+  .account-options {
+    margin-top: 30px;
+  }
+  
+  .account-button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .account-button.creator {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .account-button.investor {
+    background-color: #008CBA;
+    color: white;
+  }
+  
+  .account-button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Form Styles */
+  .account-form {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .account-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .account-form label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .account-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .account-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .account-form button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Creator Ideas Section */
+  .creator-ideas {
+    margin-top: 50px;
+    text-align: left;
+  }
+  
+  .creator-ideas h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .idea-scroll-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow-x: scroll;
+    padding: 10px;
+  }
+  
+  .idea-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    min-width: 200px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .profile-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .profile-info p {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .message-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .message-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* +More Button */
+  #loadMore {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  #loadMore:hover {
+    opacity: 0.8;
+  }
+  
+  /* Message Modal */
+  .message-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+  }
+  
+  .message-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: black;
+    text-decoration: none;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 150px;
+    resize: none;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
